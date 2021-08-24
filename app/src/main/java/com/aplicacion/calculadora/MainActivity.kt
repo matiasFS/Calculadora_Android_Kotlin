@@ -51,20 +51,17 @@ class MainActivity : AppCompatActivity() {
                 else -> 0
             }
             if(resultado.toDouble().mod(1.0)==0.0){
-                if(numero2.mod(1.0)==0.0){
-                    textResult2.text = "${textResult2.text}${numero2.toInt()}"
-                }else {
-                    textResult2.text = "${textResult2.text}$numero2"
-                }
+
                 textResult.text = resultado.toInt().toString()
             }else{
-                if(numero2.mod(1.0)==0.0){
-                    textResult2.text = "${textResult2.text}${numero2.toInt()}"
-                }else {
-                    textResult2.text = "${textResult2.text}$numero2"
-                }
                 textResult.text = resultado.toString()
             }
+            if(numero2.mod(1.0)==0.0){
+                textResult2.text = "${textResult2.text}${numero2.toInt()}"
+            }else {
+                textResult2.text = "${textResult2.text}$numero2"
+            }
+
         }
     }
     @SuppressLint("SetTextI18n")
